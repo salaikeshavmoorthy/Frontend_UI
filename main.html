@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Form in HTML and CSS | CodingNepal</title>
+  <style>
+    /* Set background image for the body */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url("E:/HTML/Sublime Text 3/bgimg.jpg") no-repeat center center/cover;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Style the login form container */
+    .login_form {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    .login_option {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .option {
+      width: 48%;
+      text-align: center;
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .option img {
+      width: 20px;
+      vertical-align: middle;
+    }
+
+    .option span {
+      margin-left: 10px;
+    }
+
+    .separator {
+      text-align: center;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .separator span {
+      background: #fff;
+      padding: 0 10px;
+    }
+
+    .separator::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: #ccc;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+
+    .input_box {
+      margin-bottom: 20px;
+    }
+
+    .input_box label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .input_box input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .password_title {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .sign_up {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .sign_up a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login_form">
+    <!-- Login form container -->
+    <form action="#">
+      <h3>Log in with</h3>
+
+      <div class="login_option">
+        <!-- Google button -->
+        <div class="option">
+          <a href="#">
+            <img src="E:/HTML/Sublime Text 3/google.png" alt="Google" />
+            <span>Google</span>
+          </a>
+        </div>
+
+        <!-- Apple button -->
+        <div class="option">
+          <a href="#">
+            <img src="E:/HTML/Sublime Text 3/apple.png" alt="Apple" />
+            <span>Apple</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Login option separator -->
+      <p class="separator">
+        <span>or</span>
+      </p>
+
+      <!-- Email input box -->
+      <div class="input_box">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter email address" required />
+      </div>
+
+      <!-- Password input box -->
+      <div class="input_box">
+        <div class="password_title">
+          <label for="password">Password</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+
+        <input type="password" id="password" placeholder="Enter your password" required />
+      </div>
+
+      <!-- Login button -->
+      <button type="submit">Log In</button>
+
+      <p class="sign_up">Don't have an account? <a href="#">Sign up</a></p>
+    </form>
+  </div>
+</body>
+</html>
